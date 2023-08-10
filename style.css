@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9376E0;
+    color: rgb(0, 0, 33);
+    text-align: center;
+    padding: 2rem;
+}
+
+.container{
+    display: flex;
+}
+
+.container .form {
+    width: 50%;
+}
+
+.container .form form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 4rem;
+    word-wrap: break-word;
+}
+
+#name,#email,#website,#url {
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    outline: 1px solid rgba(128, 128, 128, 0.26);
+    font-size: 15px;
+}
+
+#name:focus,#email:focus,#website:focus,#url:focus {
+    outline: 1px solid rgba(0, 0, 255, 0.711);
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    font-size: 1.25rem;
+    color: aliceblue;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    gap: 6.4rem;
+    font-size: 1.25rem;
+    color: aliceblue;
+}
+
+.website {
+    display: flex;
+    align-items: center;
+    gap: 4.73rem;
+    font-size: 1.25rem;
+    color: aliceblue;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    gap: 5.7rem;
+    font-size: 1.25rem;
+    color: aliceblue;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 5.3rem;
+    font-size: 1.25rem;
+    color: aliceblue;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+    font-size: 1.25rem;
+    color: aliceblue;
+}
+
+.text-val {
+    font-size: 1.18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.text-val label {
+    display: flex;
+    gap: 3px;
+}
+
+.button {
+    display: flex;
+    gap: 1.9rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.button #submit {
+    padding: 0.5rem 2.6rem;
+    font-size: 1.2rem;
+    background-color: #8766e2;
+    border: 0.1rem solid #8160db;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.37s,color 0.37s;
+}
+
+.button #submit:hover{
+    background-color: white;
+    color: #8160db;
+}
+
+.button #reset {
+    padding: 0.5rem 2.6rem;
+    font-size: 1.2rem;
+    background-color: #f73464;
+    border: 0.1rem solid #FF2E63;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.41s,color 0.41s;
+}
+
+.button #reset:hover{
+    background-color: white;
+    color: #8160db;
+}
+
+.button #submit:active,.button #reset:active {
+    background-color: black;
+    box-shadow: none;
+}
+
+.container .line {
+    margin: auto;
+    width: 8px;
+    height: 37rem;
+    background-color: #8160db;
+    border-radius: 35px;
+}
+
+.op-box {
+    width: 50%;
+    background-color: white;
+}
+
+.output {
+    padding: 45px;
+}
+
+h2 {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgb(161, 39, 232);
+}
+
+.output .cardContainer {
+    overflow-y: auto;
+    height: 71vh;
+}
+
+.output .card {
+    height: auto;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: rgba(126, 128, 126, 0.132);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 10px 0;
+    gap: 5rem;
+}
+
+.card img {
+    border-radius: 0.5rem;
+    width: 170px;
+    height: 170px;
+}
+
+.card .info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.card .info a {
+    color: rgb(43, 43, 255);
+    text-decoration: none;
+}
+
+.card .info button {
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(227, 6, 6);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card .info button:active {
+    background-color: black;
+    box-shadow: none;
+}
+
+@media(max-width:1109px) {
+    .container .line {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .form {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #name, #email, #website, #url{
+        width: 100%;
+    }
+
+    .op-box {
+        width: 100%;
+    }
+
+    .name,.email,.website,.image {
+        justify-content: space-around;
+    }
+
+    .container .form form {
+        padding: 1.2rem;
+    }
+}
+
+@media(max-width:729px) {
+
+    .output .card{
+        width: 100%;
+    }
+
+    #name, #email, #website, #url{
+        width: 100%;
+    }
+}
+
+@media(max-width:680px){
+    .output .card{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;    
+        gap: 2.5rem;
+    }
+    .card img {
+        margin: auto;
+    }
+}
+
+@media(max-width:450px) {
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    .container .form form{
+        gap:1.5rem;
+    }
+
+    #name, #email, #website, #url{
+        font-size: 0.9rem;
+    }
+
+    .name,.email,.website,.image,.gender,.skills {
+        display: contents;
+    }
+
+    .name,.email,.website,.image,.gender,.skills{
+        font-size: 1rem;
+    }
+
+    .text-val{
+        font-size: 1rem;
+        gap: 2rem;
+    }
+
+    .button #submit{
+        padding: 0.2rem 1.6rem;
+        font-size: 1.1rem;
+    }
+
+    .button #reset{
+        padding: 0.2rem 1.6rem;
+        font-size: 1.1rem;
+    }
+
+    .output{
+        padding: 1rem;
+    }
+}
+
